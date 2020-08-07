@@ -112,13 +112,13 @@ body {
     overflow: hidden
 }
 #channelName {
-    text-align: center
+    text-align: center;
     font-size: 3vw;
     top: 34.5%
 }
 #channelSubs {
     transition: color 2s ease;
-    text-align: center
+    text-align: center;
     font-size: 15.5vw;
     top: 37%;
     z-index: -1
@@ -134,9 +134,9 @@ a {
 
 .overlay {
     background-color: white;
-    filter: alpha(opacity=50); /* IE */
-    opacity: 0.5; /* Safari, Opera */
-    -moz-opacity: 0.50; /* FireFox */
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -moz-opacity: 0.50;
     z-index: 20;
     height: 100%;
     width: 100%;
