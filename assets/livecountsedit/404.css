@@ -1,0 +1,89 @@
+body {
+    text-align: center;
+    color: #fff;
+    background-color: #611;
+    font-family: Lato
+}
+
+#channelName {
+    text-align: center
+}
+#channelSubs {
+    transition: color 2s ease;
+    text-align: center
+}
+#channelSubs2 {
+    text-align: center;
+    font-size: 4.5vw
+}
+#smallText {
+    text-align: center
+}
+#title {
+    font-size: 4.5vw
+}
+#channelName {
+    font-size: 3vw;
+    top: 34.5%
+}
+a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #000
+}
+#nameLink {
+    padding: .5vw
+}
+#channelSubs {
+    font-size: 15.5vw;
+    top: 37%;
+    z-index: -1
+}
+
+#container {
+    top: 66.5%;
+    width: 40%
+}
+#smallText {
+    font-size: 2.5vw
+}
+canvas {
+    width: 25%;
+    height: 25%;
+    left: 75%;
+    bottom: 75%;
+    margin: 0px 0px 0px 0px;
+    
+}
+iframe {
+    margin: 0px 5px;
+}
+
+.overlay {
+    background-color: white;
+    filter: alpha(opacity=50); /* IE */
+    opacity: 0.5; /* Safari, Opera */
+    -moz-opacity: 0.50; /* FireFox */
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+input[type="checkbox"] {
+    margin: 0px 0px 0px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+input[type="text"] {
+    margin: 0px 0px 0px 0px;
+}
+
+input[type="number"] {
+    margin: 0px 0px 0px 0px;
+}
+
