@@ -18,10 +18,6 @@ body {
     vertical-align: middle;
     position: relative
 }
-#channelName,
-#channelSubs,
-#subscribeButton,
-#container,
 .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value,
 .odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
