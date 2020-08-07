@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Livecountsedit</title>
+        <link rel="icon" href="./assets/favicon.png">
+        <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='./assets/tabs.css' rel='stylesheet' type='text/css'>
+        <link href='./assets/main-page.css' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8">
+        <meta name="description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
+        <meta property="og:title" content="Livecountsedit">
+        <meta property="og:description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
+        <meta property="og:image" content="./assets/icon128.png">
+        <meta property="og:url" content="https://lcedit.github.io">
+    </head>
+    <body>
+        <h1 class="title">Livecountsedit</h1>
+        <div class="tab-links">
+            <button type="button" class="tab-link" onclick="openTab(event, 'About');" id="defaultTab" >About Livecountsedit</button>
+            <button type="button" class="tab-link" onclick="openTab(event, 'Versions')">Versions</button>
+            <button type="button" class="tab-link" onclick="openTab(event, 'Docs')">Docs</button>
+            <button type="button" class="tab-link" onclick="openTab(event, 'Discord')">Discord Server</button>
+        </div>
+        
+        <div id="About" class="content">
+            <p><i>Livecountsedit</i> is a 'customizable (or fake) live subscriber counter' that was created by <a href="https://randomperson3465.github.io">RandomPerson3465</a> on July 27, 2019.</p>
+            <p>Fake live subscriber counters started on January 22, 2019 when RandomPerson3465 uploaded a video of T-Series losing subscribers onto his now deleted YouTube channel. The video received over 600 thousand views by April 2019.</p>
+            <p>Livecountsedit was created when a Discord user 'Sync' messaged RandomPerson3465 about having a way to edit the subscriber counter on <a href="https://livecounts.net">Livecounts.net</a>.</p>
+            <h6 class="footer">Fun fact: The '3465' in 'RandomPerson3465' comes from the Discord tag of his account at the time he registered an account on Discord. The 'RandomPerson' part is because he is not very creative with usernames.</h6>
+        </div>
+        
+        <div id="Versions" class="content">
+            <h1 class="title">Livecountsedit</h1>
+            <div>
+                <h1>Versions of Livecountsedit</h1>
+                <li>Latest version</li>
+                <li>Livecountsedit 4.1 (coming soon)</li>
+                <li>Livecountsedit 4.0 (May 31 2020)</li>
+                <li>Livecountsedit Battle Mode v2 (May 3 2020)</li>
+                <li>Livecountsedit 3.2 (March 22 2020)</li>
+                <li>Livecountsedit 3.1 (March 19 2020)</li>
+                <li>Livecountsedit 2.1</li>
+                <li>Livecountsedit 2.0</li>
+                <li>Livecountsedit Battle Mode Classic</li>
+                <li>Livecountsedit 1.0 (July 29 2019)</li>
+            </div>
+            <div>
+                <h1>Trash Versions</h1>
+                <li>Unused live sub counter (does not work)</li>
+                <li>Dark blue sub counter theme (does not work</li>
+                <li>Anime earrape by Nick Chan</li>
+                <li>Livecountsedit Battle Mode 1.1</li>
+            </div>
+        </div>
+        
+        <div id="Docs" class="content">
+            <li class="docs-entry">Livecountsedit 4.0 Docs</li>
+            <li class="docs-entry">Livecountsedit Battle Mode Docs</li>
+        </div>
+        
+        <div id="Discord" class="content">
+            <h2>Link to Discord Server</h2><br>
+            <h2>Discord Server Rules</h2><br>
+            <h2>Mute and Ban Appeals</h2>
+        </div>
+        
+        <br>
+        <h6 class="footer">© 2020 RandomPerson3465</h6>
+        <script>
+            var c = document.getElementsByClassName("content")
+            for (i = 0; i < c.length; i++) {
+                c[i].style.display = 'none'
+            }
+            function openTab(e, tab) {
+                var i, tc, tl;
+                tc = document.getElementsByClassName("content")
+                for (i = 0; i < tc.length; i++) {
+                    tc[i].style.display = 'none'
+                }
+                tl = document.getElementsByClassName("tab-link")
+                for (i = 0; i < tl.length; i++) {
+                    tl[i].className = tl[i].className.replace(" active", "")
+                }
+                document.getElementById(tab).style.display = 'block'
+                e.currentTarget.className += ' active'
+            }
+            document.querySelector("#defaultTab").click()
+        </script>
+    </body>
+</html>
