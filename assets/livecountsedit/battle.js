@@ -159,7 +159,7 @@ var chart = new Highcharts['chart']({
 setInterval(() => {
     if (!a) return;
     var x = chart[_0x3913('0x20')][0x0][_0x3913('0xc')]([Date['now'](), Math['round'](g)], !![]);
-    setTimeout(()=>{chart.series[0].removePoint(x)},36e5)}},5e3)
+    setTimeout(()=>{chart.series[0].removePoint(x)},18e5)
 }, 0x3e8);
 document[_0x3913('0x1c')](_0x3913('0x16'), K);
 
