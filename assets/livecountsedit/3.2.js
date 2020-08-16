@@ -529,7 +529,7 @@ maxLabelsX = 5;
 maxLabelsY = 3;
 /** @type {number} */
 maxValues = 500;
-let r = ![];
+var r = ![];
 /** @type {boolean} */
 noDecimals = !![];
 const canvas = document["getElementById"](_0x2fed("0x24"));
