@@ -322,12 +322,12 @@ var maxValues = 500;
 var r = ![];
 /** @type {boolean} */
 var noDecimals = !![];
-const canvas = document["getElementById"](_0x2fed("0x24"));
+canvas = document["getElementById"](_0x2fed("0x24"));
 if (canvas[_0x2fed("0x3")]) {
   var ctx = canvas[_0x2fed("0x3")]("2d");
 }
-const width = canvas[_0x2fed("0xb")];
-const height = canvas[_0x2fed("0xd")];
+var width = canvas[_0x2fed("0xb")];
+var height = canvas[_0x2fed("0xd")];
 /**
  * @param {?} isReturnSeconds
  * @param {boolean} isShowHours
