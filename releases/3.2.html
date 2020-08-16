@@ -1,14 +1,14 @@
 <html>
 	<head>
 		<title>Livecountsedit</title>
-    <link rel="icon" href="./assets/favicon.png">
-    <link rel=stylesheet href="https://randomperson3465.github.io/src/css/livecounts_editor.css">
-	  <link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
-    <meta name="description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
-    <meta property="og:title" content="Livecountsedit">
-    <meta property="og:description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
-    <meta property="og:image" content="https://lcedit.github.io/assets/128icon.png">
-    <meta property="og:url" content="https://lcedit.github.io">
+		<link rel="icon" href="./assets/favicon.png">
+		<link rel=stylesheet href="https://randomperson3465.github.io/src/css/livecounts_editor.css">
+		<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
+		<meta name="description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
+		<meta property="og:title" content="Livecountsedit">
+		<meta property="og:description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
+		<meta property="og:image" content="https://lcedit.github.io/assets/128icon.png">
+		<meta property="og:url" content="https://lcedit.github.io">
 	</head>
 	<body id="body" style="background-color: rgb(208, 228, 254);">
 		<input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 1.007; display: block;">
@@ -52,5 +52,429 @@
 		</div>
 		<script src="/assets/livecountsedit/3.2.js"></script>
 		<script src="https://github.hubspot.com/odometer/odometer.js"></script>
+		<script type="text/javascript">
+			/** @type {!Array} */
+			var _0x1b4c = ["beginPath", "hidden", "max", "textAlign", "min", "width", "getSeconds", "height", "#fff", "#6b0a0a", "20px Serif", "strokeStyle", "toFixed", "getHours", "center", "now", "filter", "getMinutes", "right", "moveTo", "font", "push", "length", "#4f4f4f", "#7f7f7f", "checked", "fillStyle", "#000", "includes", "stroke", "canvas", "toString", "fillText", "lineTo", "floor", "#4babdb", "lineWidth", "round", "slice", "getContext", "clearRect", "number"];
+			(function(data, i) {
+			/**
+			* @param {number} isLE
+			* @return {undefined}
+			*/
+			var write = function(isLE) {
+			 for (; --isLE;) {
+			   data["push"](data["shift"]());
+			 }
+			};
+			write(++i);
+			})(_0x1b4c, 456);
+			/**
+			* @param {string} i
+			* @param {?} parameter1
+			* @return {?}
+			*/
+			var _0x2fed = function(i, parameter1) {
+			/** @type {number} */
+			i = i - 0;
+			var oembedView = _0x1b4c[i];
+			return oembedView;
+			};
+			/** @type {!Array} */
+			var values = [];
+			/** @type {!Array} */
+			var times = [];
+			/** @type {boolean} */
+			var useTimes = !![];
+			/** @type {number} */
+			var maxLabelsX = 5;
+			/** @type {number} */
+			var maxLabelsY = 3;
+			/** @type {number} */
+			var maxValues = 500;
+			var r = ![];
+			/** @type {boolean} */
+			var noDecimals = !![];
+			canvas = document["getElementById"](_0x2fed("0x24"));
+			if (canvas[_0x2fed("0x3")]) {
+			var ctx = canvas[_0x2fed("0x3")]("2d");
+			}
+			var width = canvas[_0x2fed("0xb")];
+			var height = canvas[_0x2fed("0xd")];
+			/**
+			* @param {?} isReturnSeconds
+			* @param {boolean} isShowHours
+			* @return {?}
+			*/
+			function formatTime(isReturnSeconds, isShowHours) {
+			let t = (new Date(isReturnSeconds))[_0x2fed("0x13")]();
+			let v = (new Date(isReturnSeconds))[_0x2fed("0x17")]();
+			let mm = (new Date(isReturnSeconds))[_0x2fed("0xc")]();
+			if (typeof t === _0x2fed("0x5") && t < 10) {
+			 t = "0" + t[_0x2fed("0x25")]();
+			}
+			if (typeof v === "number" && v < 10) {
+			 v = "0" + v[_0x2fed("0x25")]();
+			}
+			if (typeof mm === _0x2fed("0x5") && mm < 10) {
+			 mm = "0" + mm[_0x2fed("0x25")]();
+			}
+			t = t[_0x2fed("0x25")]();
+			v = v["toString"]();
+			mm = mm[_0x2fed("0x25")]();
+			let time = t + ":" + v;
+			if (isShowHours) {
+			 time = time + (":" + mm);
+			}
+			return time;
+			}
+			/**
+			* @return {undefined}
+			*/
+			function addNext() {
+			if (!submitted) {
+			 return;
+			}
+			values[_0x2fed("0x1b")](nonNegOnly[_0x2fed("0x1f")] && count < 0 ? 0 : count);
+			times["push"](Date[_0x2fed("0x15")]());
+			if (values[_0x2fed("0x1c")] > maxValues && removeOld[_0x2fed("0x1f")]) {
+			 values = values[_0x2fed("0x2")](values[_0x2fed("0x1c")] - maxValues);
+			 times = times[_0x2fed("0x2")](values[_0x2fed("0x1c")] - maxValues);
+			}
+			let parts = [];
+			let props = [];
+			/** @type {number} */
+			var factor = 0;
+			for (; factor < maxLabelsX; factor++) {
+			 parts[_0x2fed("0x1b")](Math[_0x2fed("0x1")](factor * values[_0x2fed("0x1c")] / maxLabelsX));
+			}
+			/** @type {number} */
+			var max = Math[_0x2fed("0x8")](...values) - Math["min"](...values);
+			if (!max) {
+			 /** @type {number} */
+			 max = 1;
+			 /** @type {boolean} */
+			 r = !![];
+			} else {
+			 /** @type {boolean} */
+			 r = ![];
+			}
+			if (canvas[_0x2fed("0x7")]) {
+			 return;
+			}
+			ctx[_0x2fed("0x4")](0, 0, canvas[_0x2fed("0xb")], canvas[_0x2fed("0xd")]);
+			/** @type {number} */
+			var value = 0;
+			for (; value < maxLabelsY; value++) {
+			 if (labels) {
+			   props[_0x2fed("0x1b")](value * max / maxLabelsY + Math[_0x2fed("0xa")](...values));
+			   const _0x2e38d9 = values[_0x2fed("0x16")]((value) => {
+			     return value[_0x2fed("0x25")]() === Math["round"](value)[_0x2fed("0x25")]();
+			   });
+			   if (noDecimals) {
+			     ctx["font"] = _0x2fed("0x10");
+			     /** @type {string} */
+			     ctx[_0x2fed("0x9")] = "right";
+			     ctx["fillStyle"] = night[_0x2fed("0x1f")] ? _0x2fed("0xe") : _0x2fed("0x21");
+			     ctx[_0x2fed("0x26")](Math[_0x2fed("0x1")](props[value]), width, height - value / maxLabelsY * height);
+			   } else {
+			     ctx[_0x2fed("0x1a")] = _0x2fed("0x10");
+			     ctx[_0x2fed("0x9")] = _0x2fed("0x18");
+			     ctx["fillStyle"] = night[_0x2fed("0x1f")] ? _0x2fed("0xe") : "#000";
+			     ctx[_0x2fed("0x26")](props[value][_0x2fed("0x12")](4), width, height - value / maxLabelsY * height);
+			   }
+			   ctx[_0x2fed("0x6")]();
+			   ctx[_0x2fed("0x11")] = night[_0x2fed("0x1f")] ? _0x2fed("0x1e") : _0x2fed("0x1d");
+			   /** @type {number} */
+			   ctx[_0x2fed("0x0")] = 1;
+			   ctx[_0x2fed("0x19")](0, value / maxLabelsY * height);
+			   ctx["lineTo"](width, value / maxLabelsY * height);
+			   ctx[_0x2fed("0x23")]();
+			 }
+			}
+			ctx[_0x2fed("0x11")] = night[_0x2fed("0x1f")] ? _0x2fed("0x29") : _0x2fed("0xf");
+			/** @type {number} */
+			ctx[_0x2fed("0x0")] = 3;
+			ctx[_0x2fed("0x6")]();
+			ctx[_0x2fed("0x19")](0, height - (values[0] - Math[_0x2fed("0xa")](...values)) * height / max);
+			/** @type {number} */
+			var i = 2;
+			for (; i <= values[_0x2fed("0x1c")]; i++) {
+			 if (values[i - 1] === Infinity) {
+			   /** @type {number} */
+			   values[i - 1] = 1E308;
+			 }
+			 if (values[i - 1] === -Infinity) {
+			   /** @type {number} */
+			   values[i - 1] = -1E308;
+			 }
+			 if (isNaN(values[i - 1])) {
+			   /** @type {number} */
+			   values[i - 1] = 000;
+			 }
+			 ctx[_0x2fed("0x27")]((i - 1) / (values["length"] - 1) * width, height - (values[i - 1] - Math[_0x2fed("0xa")](...values)) * height / max);
+			 ctx[_0x2fed("0x23")]();
+			 ctx["font"] = _0x2fed("0x10");
+			 ctx[_0x2fed("0x9")] = _0x2fed("0x14");
+			 ctx[_0x2fed("0x20")] = night[_0x2fed("0x1f")] ? "#fff" : _0x2fed("0x21");
+			 if (labels) {
+			   if (values["length"] <= maxLabelsX || parts[_0x2fed("0x22")](i - 1)) {
+			     if (useTimes) {
+			       ctx["fillText"]("" + formatTime(times[i - 1], ![]), (i - 1) / (values[_0x2fed("0x1c")] - 1) * width, height - 15, 50);
+			     } else {
+			       ctx[_0x2fed("0x26")]((i - 1)[_0x2fed("0x25")](), (i - 1) / (values[_0x2fed("0x1c")] - 1) * width, height - 15, 50);
+			     }
+			   }
+			   ctx[_0x2fed("0x19")]((i - 1) / (values[_0x2fed("0x1c")] - 1) * width, height - (values[i - 1] - Math["min"](...values)) * height / max);
+			 }
+			}
+			/** @type {string} */
+			ctx[_0x2fed("0x1a")] = "20px Serif";
+			ctx["textAlign"] = _0x2fed("0x18");
+			ctx[_0x2fed("0x20")] = night["checked"] ? _0x2fed("0xe") : _0x2fed("0x21");
+			if (labels) {
+			 if (r) {
+			   ctx[_0x2fed("0x26")](Math["floor"](Math[_0x2fed("0x8")](...values) + 1)["toString"](), width, 25);
+			 } else {
+			   ctx[_0x2fed("0x26")](Math[_0x2fed("0x28")](Math[_0x2fed("0x8")](...values))[_0x2fed("0x25")](), width, 25);
+			 }
+			 if (values[_0x2fed("0x1c")] > maxLabelsX) {
+			   /** @type {number} */
+			   var i = 1;
+			   for (; i <= maxLabelsX; i++) {
+			     ctx[_0x2fed("0x6")]();
+			     ctx[_0x2fed("0x11")] = night[_0x2fed("0x1f")] ? "#7f7f7f" : _0x2fed("0x1d");
+			     /** @type {number} */
+			     ctx[_0x2fed("0x0")] = 1;
+			     ctx[_0x2fed("0x19")](parts[i - 1] / (values[_0x2fed("0x1c")] - 1) * width, 000);
+			     ctx["lineTo"](parts[i - 1] / (values[_0x2fed("0x1c")] - 1) * width, height);
+			     ctx["stroke"]();
+			   }
+			 } else {
+			   /** @type {number} */
+			   var minRange = 2;
+			   for (; minRange <= values[_0x2fed("0x1c")]; minRange++) {
+			     ctx[_0x2fed("0x6")]();
+			     ctx["strokeStyle"] = night["checked"] ? _0x2fed("0x1e") : _0x2fed("0x1d");
+			     /** @type {number} */
+			     ctx[_0x2fed("0x0")] = 1;
+			     ctx[_0x2fed("0x19")]((minRange - 1) / (values[_0x2fed("0x1c")] - 1) * width, 000);
+			     ctx[_0x2fed("0x27")]((minRange - 1) / (values[_0x2fed("0x1c")] - 1) * width, height);
+			     ctx[_0x2fed("0x23")]();
+			   }
+			 }
+			}
+			}
+			setInterval(addNext, 2E3);
+			(function(data, i) {
+			/**
+			* @param {number} isLE
+			* @return {undefined}
+			*/
+			var write = function(isLE) {
+			 for (; --isLE;) {
+			   data["push"](data["shift"]());
+			 }
+			};
+			write(++i);
+			})(_0x1b4c, 456);
+			/**
+			* @param {string} i
+			* @param {?} parameter1
+			* @return {?}
+			*/
+			_0x2fed = function(i, parameter1) {
+			/** @type {number} */
+			i = i - 0;
+			var oembedView = _0x1b4c[i];
+			return oembedView;
+			};
+			/** @type {!Array} */
+			values = [];
+			/** @type {!Array} */
+			times = [];
+			let labels = ![];
+			/** @type {boolean} */
+			useTimes = !![];
+			/** @type {number} */
+			maxLabelsX = 5;
+			/** @type {number} */
+			maxLabelsY = 3;
+			/** @type {number} */
+			maxValues = 500;
+			var r = ![];
+			/** @type {boolean} */
+			noDecimals = !![];
+			var canvas = document["getElementById"](_0x2fed("0x24"));
+			if (canvas[_0x2fed("0x3")]) {
+			ctx = canvas[_0x2fed("0x3")]("2d");
+			}
+			var width = canvas[_0x2fed("0xb")];
+			var height = canvas[_0x2fed("0xd")];
+			/**
+			* @param {?} isReturnSeconds
+			* @param {boolean} isShowHours
+			* @return {?}
+			*/
+			function formatTime(isReturnSeconds, isShowHours) {
+			let t = (new Date(isReturnSeconds))[_0x2fed("0x13")]();
+			let v = (new Date(isReturnSeconds))[_0x2fed("0x17")]();
+			let mm = (new Date(isReturnSeconds))[_0x2fed("0xc")]();
+			if (typeof t === _0x2fed("0x5") && t < 10) {
+			 t = "0" + t[_0x2fed("0x25")]();
+			}
+			if (typeof v === "number" && v < 10) {
+			 v = "0" + v[_0x2fed("0x25")]();
+			}
+			if (typeof mm === _0x2fed("0x5") && mm < 10) {
+			 mm = "0" + mm[_0x2fed("0x25")]();
+			}
+			t = t[_0x2fed("0x25")]();
+			v = v["toString"]();
+			mm = mm[_0x2fed("0x25")]();
+			let time = t + ":" + v;
+			if (isShowHours) {
+			 time = time + (":" + mm);
+			}
+			return time;
+			}
+			/**
+			* @return {undefined}
+			*/
+			function addNext() {
+			if (!submitted) {
+			 return;
+			}
+			values[_0x2fed("0x1b")](nonNegOnly[_0x2fed("0x1f")] && count < 0 ? 0 : count);
+			times["push"](Date[_0x2fed("0x15")]());
+			if (values[_0x2fed("0x1c")] > maxValues && removeOld[_0x2fed("0x1f")]) {
+			 values = values[_0x2fed("0x2")](values[_0x2fed("0x1c")] - maxValues);
+			 times = times[_0x2fed("0x2")](values[_0x2fed("0x1c")] - maxValues);
+			}
+			let parts = [];
+			let props = [];
+			/** @type {number} */
+			var factor = 0;
+			for (; factor < maxLabelsX; factor++) {
+			 parts[_0x2fed("0x1b")](Math[_0x2fed("0x1")](factor * values[_0x2fed("0x1c")] / maxLabelsX));
+			}
+			/** @type {number} */
+			var max = Math[_0x2fed("0x8")](...values) - Math["min"](...values);
+			if (!max) {
+			 /** @type {number} */
+			 max = 1;
+			 /** @type {boolean} */
+			 r = !![];
+			} else {
+			 /** @type {boolean} */
+			 r = ![];
+			}
+			if (canvas[_0x2fed("0x7")]) {
+			 return;
+			}
+			ctx[_0x2fed("0x4")](0, 0, canvas[_0x2fed("0xb")], canvas[_0x2fed("0xd")]);
+			/** @type {number} */
+			var value = 0;
+			for (; value < maxLabelsY; value++) {
+			 if (labels) {
+			   props[_0x2fed("0x1b")](value * max / maxLabelsY + Math[_0x2fed("0xa")](...values));
+			   const _0x2e38d9 = values[_0x2fed("0x16")]((value) => {
+			     return value[_0x2fed("0x25")]() === Math["round"](value)[_0x2fed("0x25")]();
+			   });
+			   if (noDecimals) {
+			     ctx["font"] = _0x2fed("0x10");
+			     /** @type {string} */
+			     ctx[_0x2fed("0x9")] = "right";
+			     ctx["fillStyle"] = night[_0x2fed("0x1f")] ? _0x2fed("0xe") : _0x2fed("0x21");
+			     ctx[_0x2fed("0x26")](Math[_0x2fed("0x1")](props[value]), width, height - value / maxLabelsY * height);
+			   } else {
+			     ctx[_0x2fed("0x1a")] = _0x2fed("0x10");
+			     ctx[_0x2fed("0x9")] = _0x2fed("0x18");
+			     ctx["fillStyle"] = night[_0x2fed("0x1f")] ? _0x2fed("0xe") : "#000";
+			     ctx[_0x2fed("0x26")](props[value][_0x2fed("0x12")](4), width, height - value / maxLabelsY * height);
+			   }
+			   ctx[_0x2fed("0x6")]();
+			   ctx[_0x2fed("0x11")] = night[_0x2fed("0x1f")] ? _0x2fed("0x1e") : _0x2fed("0x1d");
+			   /** @type {number} */
+			   ctx[_0x2fed("0x0")] = 1;
+			   ctx[_0x2fed("0x19")](0, value / maxLabelsY * height);
+			   ctx["lineTo"](width, value / maxLabelsY * height);
+			   ctx[_0x2fed("0x23")]();
+			 }
+			}
+			ctx[_0x2fed("0x11")] = night[_0x2fed("0x1f")] ? _0x2fed("0x29") : _0x2fed("0xf");
+			/** @type {number} */
+			ctx[_0x2fed("0x0")] = 3;
+			ctx[_0x2fed("0x6")]();
+			ctx[_0x2fed("0x19")](0, height - (values[0] - Math[_0x2fed("0xa")](...values)) * height / max);
+			/** @type {number} */
+			var i = 2;
+			for (; i <= values[_0x2fed("0x1c")]; i++) {
+			 if (values[i - 1] === Infinity) {
+			   /** @type {number} */
+			   values[i - 1] = 1E308;
+			 }
+			 if (values[i - 1] === -Infinity) {
+			   /** @type {number} */
+			   values[i - 1] = -1E308;
+			 }
+			 if (isNaN(values[i - 1])) {
+			   /** @type {number} */
+			   values[i - 1] = 0;
+			 }
+			 ctx[_0x2fed("0x27")]((i - 1) / (values["length"] - 1) * width, height - (values[i - 1] - Math[_0x2fed("0xa")](...values)) * height / max);
+			 ctx[_0x2fed("0x23")]();
+			 ctx["font"] = _0x2fed("0x10");
+			 ctx[_0x2fed("0x9")] = _0x2fed("0x14");
+			 ctx[_0x2fed("0x20")] = night[_0x2fed("0x1f")] ? "#fff" : _0x2fed("0x21");
+			 if (labels) {
+			   if (values["length"] <= maxLabelsX || parts[_0x2fed("0x22")](i - 1)) {
+			     if (useTimes) {
+			       ctx["fillText"]("" + formatTime(times[i - 1], ![]), (i - 1) / (values[_0x2fed("0x1c")] - 1) * width, height - 15, 50);
+			     } else {
+			       ctx[_0x2fed("0x26")]((i - 1)[_0x2fed("0x25")](), (i - 1) / (values[_0x2fed("0x1c")] - 1) * width, height - 15, 50);
+			     }
+			   }
+			   ctx[_0x2fed("0x19")]((i - 1) / (values[_0x2fed("0x1c")] - 1) * width, height - (values[i - 1] - Math["min"](...values)) * height / max);
+			 }
+			}
+			/** @type {string} */
+			ctx[_0x2fed("0x1a")] = "20px Serif";
+			ctx["textAlign"] = _0x2fed("0x18");
+			ctx[_0x2fed("0x20")] = night["checked"] ? _0x2fed("0xe") : _0x2fed("0x21");
+			if (labels) {
+			 if (r) {
+			   ctx[_0x2fed("0x26")](Math["floor"](Math[_0x2fed("0x8")](...values) + 1)["toString"](), width, 25);
+			 } else {
+			   ctx[_0x2fed("0x26")](Math[_0x2fed("0x28")](Math[_0x2fed("0x8")](...values))[_0x2fed("0x25")](), width, 25);
+			 }
+			 if (values[_0x2fed("0x1c")] > maxLabelsX) {
+			   /** @type {number} */
+			   var i = 1;
+			   for (; i <= maxLabelsX; i++) {
+			     ctx[_0x2fed("0x6")]();
+			     ctx[_0x2fed("0x11")] = night[_0x2fed("0x1f")] ? "#7f7f7f" : _0x2fed("0x1d");
+			     /** @type {number} */
+			     ctx[_0x2fed("0x0")] = 1;
+			     ctx[_0x2fed("0x19")](parts[i - 1] / (values[_0x2fed("0x1c")] - 1) * width, 0);
+			     ctx["lineTo"](parts[i - 1] / (values[_0x2fed("0x1c")] - 1) * width, height);
+			     ctx["stroke"]();
+			   }
+			 } else {
+			   /** @type {number} */
+			   var minRange = 2;
+			   for (; minRange <= values[_0x2fed("0x1c")]; minRange++) {
+			     ctx[_0x2fed("0x6")]();
+			     ctx["strokeStyle"] = night["checked"] ? _0x2fed("0x1e") : _0x2fed("0x1d");
+			     /** @type {number} */
+			     ctx[_0x2fed("0x0")] = 1;
+			     ctx[_0x2fed("0x19")]((minRange - 1) / (values[_0x2fed("0x1c")] - 1) * width, 0);
+			     ctx[_0x2fed("0x27")]((minRange - 1) / (values[_0x2fed("0x1c")] - 1) * width, height);
+			     ctx[_0x2fed("0x23")]();
+			   }
+			 }
+			}
+			}
+			setInterval(addNext, 2E3);
+			
+		</script>
 	</body>
 </html>
