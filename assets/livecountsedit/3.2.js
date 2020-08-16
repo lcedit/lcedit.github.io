@@ -311,7 +311,6 @@ var _0x2fed = function(i, parameter1) {
 var values = [];
 /** @type {!Array} */
 var times = [];
-let labels = ![];
 /** @type {boolean} */
 var useTimes = !![];
 /** @type {number} */
