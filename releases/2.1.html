@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Livecountsedit</title>
+		<link rel="icon" href="/assets/favicon.png">
+		<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link rel=stylesheet href="https://randomperson3465.github.io/src/css/livecounts_editor.css">
+		<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">
+		<meta charset="UTF-8">
+		<meta name="description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
+		<meta property="og:title" content="Livecountsedit">
+		<meta property="og:description" content="Livecountsedit is a customizable &quot;live subscriber counter&quot; that is free to use.">
+		<meta property="og:image" content="https://lcedit.github.io/assets/128icon.png">
+		<meta property="og:url" content="https://lcedit.github.io">
+	</head>
+	<body style="background-color: rgb(208, 228, 254);">
+		<input id="subscribeButton" type="submit" value="Subscribe!" style="opacity: 1.007; display: block;">
+		<a id="channelName" style="color: rgb(0, 0, 0); border: 3px none green;">Channel name</a>
+		<div class="odometer odometer-auto-theme" id="channelSubs" style="color: rgb(0, 0, 0);">0</div>
+		<div align="left" style="margin-top: 40% font-size: 36px">
+			<input type="text" id="channelSubmitName" name="channelSubmitName" placeholder="Channel Name"><br>
+			<input type="number" id="countSubmit" name="countSubmit" placeholder="Channel subs"><br>
+			<input type="number" id="subsPerMinute" name="subsPerMinute" placeholder="Sub gain rate (optional)"><br>
+			<input type="submit" value="Set Values" ONCLICK="submit(); updateSubs()"><br>
+			<input type="checkbox" id="stop" name="stop" value="stop" ONCLICK="stopAtZero()">
+			<label for="stop">Non-negative counts only</label><br>
+			<select id="rateOption">
+				<option value="secs">Rate in subs/second</option>
+				<option value="mins">Rate in subs/minute</option>
+				<option value="hrs">Rate in subs/hour</option>
+			</select>
+			<div align="left" style="font-family: Arial">
+				<text>This site is not affiliated with </text>
+				<a href="https://livecounts.net" style="color: #08f">livecounts.net</a>
+			</div>
+		</div>
+		<script src="/assets/livecountsedit/2.1.js"></script>
+		<script src="https://github.hubspot.com/odometer/odometer.js"></script>
+</html>
